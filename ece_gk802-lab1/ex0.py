@@ -20,7 +20,7 @@ with requests.get(url) as response:
 
     if cookies_info:
         for cookie in cookies_info:
-            print(f"Cookie {cookie.name}={cookie.value}")
+            print(f"\nCookie {cookie.name}={cookie.value}")
             expires_date = datetime.utcfromtimestamp(round(cookie.expires)).strftime('%a, %d %b %Y %H:%M:%S GMT')#μετατροπή στην επιθυμητή μορφή
             print(f"expires: {expires_date}")
     else:
